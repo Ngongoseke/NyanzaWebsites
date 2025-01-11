@@ -1,0 +1,442 @@
+:root {
+    --light-purple: #F9F5FF;
+    --soft-purple: #D4C2FC;
+    --muted-purple: #998FC7;
+    --dark-gray: #28262C;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-align: center;
+}
+
+/* Hero Section Styling */
+.hero {
+    background-image: url('assets/images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Initial transparent overlay */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    z-index: 1; /* Ensure it's over the background but under text */
+}
+
+.hero-overlay-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Initial transparent overlay */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    z-index: 1; /* Ensure it's over the background but under text */
+}
+
+.hero-text {
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.hero-text h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Lighter shadow for better readability */
+    color: white; /* Ensure text is white and not affected by background darkness */
+    font-family: 'Arial', sans-serif; /* Example font change */
+}
+
+/* Parallax Effect */
+.hero {
+    background-image: url('assets/images/hero-image.jpg'); /* Your image path */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.about-hero {
+    background-image: url('assets/images/marin.jpg'); /* Your image path */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    position: relative;
+}
+
+.services-hero {
+    background-image: url('assets/images/sf.jpg'); /* Your image path */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    position: relative;
+}
+
+.contact-hero {
+    background-image: url('assets/images/marin2.jpg'); /* Your image path */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero h1, .hero h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* About Section - Image Adjustment */
+#about .row {
+    display: flex;
+    align-items: center; /* Vertically center the columns */
+    justify-content: space-between; /* Ensure proper spacing */
+}
+
+#about .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .col-md-6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
+    border-radius: 10px; /* Optional: Rounded corners for the image */
+    max-width: 100%; /* Ensure image is responsive */
+    max-height: 100%; /* Ensure image is responsive */
+}
+
+/* Navbar Styling */
+nav.navbar {
+    padding: 1rem 2rem; /* Increase navbar padding */
+}
+
+nav.navbar .navbar-brand {
+    font-size: 1.5rem; /* Increase brand font size */
+}
+
+nav.navbar .navbar-nav .nav-link {
+    font-size: 1.1rem; /* Increase nav-link font size */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: #ccc;
+}
+
+/* Make sure all sections have responsive padding */
+section {
+    padding: 50px 0;
+}
+
+/* Optional: Adjust font sizes and spacing for smaller screens */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .rounded-square {
+        max-width: 300px; /* Make image smaller on mobile */
+    }
+
+    /* Ensure text content is not too wide on smaller screens */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Services Section Styling */
+#services {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#services p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Services Grid Layout */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px); /* Two columns */
+    max-width: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.features li {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.features .included {
+    color: green;
+}
+
+.features .excluded {
+    color: red;
+}
+
+.price {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.additional-info {
+    font-size: 1rem;
+    color: #555;
+}
+
+.payment-options {
+    margin-top: 30px;
+}
+
+.payment-options h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.payment-options ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.payment-options li {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+    }
+
+    .service {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+#contact h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#contact form .form-control {
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#contact form .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contact form .btn:hover {
+    background-color: #0056b3;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+#contact form .form-control {
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#contact form .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contact form .btn:hover {
+    background-color: #0056b3;
+}
+
+.map-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ /* Parallax Effect */
+.hero {
+    background-image: url('assets/images/hero-image.jpg'); /* Your image path */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+/* Make the text stand out on the parallax background */
+.hero h1, .hero h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Add space for other sections */
+section {
+    padding: 60px 0;
+}
+
+.footer {
+    background: #1c1c1c; /* Majestic gradient */
+    color: white;
+    padding: 50px 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Evenly distribute columns */
+    text-align: center;
+}
+
+.footer-column {
+    flex: 1; /* Ensure all columns take equal width */
+    display: flex;
+    align-items: center; /* Horizontal centering */
+    justify-content: center; /* Vertical centering */
+    padding: 15px; /* Optional: Add spacing inside columns */
+    text-align: center;
+}
+
+.footer-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-heading {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: white; /* Majestic lavender */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.footer-link {
+    color: #d3d3d3;
+    text-decoration: none;
+    transition: color 0.3s;
+    justify-content: center; /* Vertical centering */
+    display: flex;  
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.footer-social-icons {
+    display: flex;  
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social-icon {
+    color: #d3d3d3;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social-icon:hover {
+    color: white; /* Highlight on hover */
+    transform: scale(1.2);
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    color: #a9a9a9;
+    margin-top: 20px;
+    text-align: center;
+}
+
