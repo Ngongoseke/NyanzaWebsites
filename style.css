@@ -177,6 +177,19 @@ section {
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    .services-grid {
+        flex-direction: column;
+    }
+
+    .service {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .aboutme {
+        padding-top: 30px;
+    }
 }
 
 /* Services Section Styling */
@@ -274,18 +287,6 @@ section {
     margin: 5px 0;
     font-size: 1rem;
     color: #555;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .services-grid {
-        flex-direction: column;
-    }
-
-    .service {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
 }
 
 #contact h4 {
