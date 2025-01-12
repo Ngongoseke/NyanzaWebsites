@@ -440,3 +440,19 @@ section {
     text-align: center;
 }
 
+/* Special Resume Button Styling */
+.navbar .resume-button {
+    background-color: #d3d3d3; /* Light gray background */
+    color: #000; /* Black text */
+    padding: 8px; /* Add padding to make it look like a button */
+    border-radius: 5px; /* Slightly rounded edges */
+    font-weight: bold; /* Bold text */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    margin-left: 15px; /* Space from the rest of the navbar */
+}
+
+.navbar .resume-button:hover {
+    background-color: #b0b0b0; /* Darker gray on hover */
+    color: #fff; /* White text on hover */
+    text-decoration: none; /* Remove underline */
+}
