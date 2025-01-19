@@ -542,3 +542,94 @@ footer {
     padding: 20px 0;
     overflow: hidden;
 }
+
+.facebook:hover {
+    color: #316FF6;
+}
+
+.x:hover {
+    color: #1DA1F2;
+}
+
+.instagram:hover {
+    color: #E4405F;
+}
+
+.youtube:hover {
+    color: #FF0000;
+}
+
+/* Services Grid Layout */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px); /* Two columns by default */
+    max-width: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service p {
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column; /* Stack the cards vertically */
+    }
+
+    .service {
+        flex: 1 1 100%; /* Make each card take full width */
+        max-width: 100%; /* Ensure cards take full width */
+    }
+}
+
+/* Service Card Hover Effect */
+.service {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+}
+
+/* Timeline Event Hover Effect */
+.timeline-event {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.timeline-event:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+}
+
+.timeline-line {
+    background-color: #ddd; /* Light color for the line */
+    transition: background-color 0.3s ease;
+}
+
+.timeline-event:hover .timeline-line {
+    background-color: #007bff; /* Change the line color to blue when hovering */
+}
