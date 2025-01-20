@@ -10,6 +10,10 @@ html, body {
     scroll-behavior: smooth;
     text-align: center;
     background-color: var(--secondary);
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20"%3E%3Crect width="20" height="20" fill="%23ffffff"/%3E%3Crect x="10" y="10" width="10" height="10" fill="%23fcfcfc"/%3E%3Crect x="0" y="0" width="10" height="10" fill="%23fcfcfc"/%3E%3C/svg%3E');
+    background-repeat: repeat;
+    background-size: 40px 40px; /* Adjust the size if needed */
+    background-color: var(--secondary); /* Fallback color */
 }
 
 /* Hero Section Styling */
@@ -121,7 +125,7 @@ html, body {
 
 #about .col-md-6 img {
     width: 100%;
-    height: 100%;
+    height: 50vh;
     object-fit: cover; /* Maintain aspect ratio while filling the container */
     border-radius: 10px; /* Optional: Rounded corners for the image */
     max-width: 100%; /* Ensure image is responsive */
@@ -199,7 +203,6 @@ section {
 
 /* services Section Styling */
 #services {
-    background-color: #f9f9f9;
     padding: 40px 0;
     font-family: Arial, sans-serif;
 }
@@ -378,7 +381,7 @@ section {
     background: #1c1c1c; /* Majestic gradient */
     color: white;
     padding: 50px 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Ariel', sans-serif;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* Evenly distribute columns */
@@ -630,4 +633,16 @@ footer {
 
 .timeline-event:hover .timeline-line {
     background-color: #007bff; /* Change the line color to blue when hovering */
+}
+
+.pfp {
+    height: 50px;
+    width: 40px;
+}
+
+.navbar-logo {
+    width: 50px;   /* Adjust the size as needed */
+    height: 50px;  /* Adjust the size as needed */
+    border-radius: 50%;  /* Makes the image circular */
+    margin-right: 10px;  /* Space between the logo and the text */
 }
